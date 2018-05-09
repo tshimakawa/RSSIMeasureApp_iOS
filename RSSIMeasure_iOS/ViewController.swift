@@ -41,6 +41,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         manager.delegate = self
         //UUIDからNSUUIDを作成
         proximityUUID = NSUUID(uuidString:"3DBD0100-1DDD-46AC-9E40-6B530FA0DF94")
+        proximityUUID = NSUUID(uuidString:"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX")
         region = CLBeaconRegion(proximityUUID:proximityUUID! as UUID,identifier:"BLEBeacon")//リージョンの作成
         
         //書き込むファイル名
