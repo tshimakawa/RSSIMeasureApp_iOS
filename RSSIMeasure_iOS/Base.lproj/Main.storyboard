@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RSSIMeasure_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OxW-ka-INn" userLabel="スペース1">
+                                <rect key="frame" x="0.0" y="20" width="320" height="82"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMn-kc-a4g" userLabel="UUIDView群">
+                                <rect key="frame" x="0.0" y="102" width="320" height="55"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pn4-bK-kRS" userLabel="スペース1">
+                                        <rect key="frame" x="0.0" y="0.0" width="13" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UUID :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dea-zj-IjV" customClass="IBDesignableLabel" customModule="RSSIMeasure_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="13" y="0.0" width="64" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSP-bg-UlS" userLabel="スペース2">
+                                        <rect key="frame" x="77" y="0.0" width="3" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEc-It-5sA" userLabel="UUID Text" customClass="IBDesignableLabel" customModule="RSSIMeasure_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="80" y="0.0" width="227" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="cEc-It-5sA" firstAttribute="height" secondItem="rMn-kc-a4g" secondAttribute="height" id="Bsl-kP-9jI"/>
+                                    <constraint firstItem="cEc-It-5sA" firstAttribute="leading" secondItem="BSP-bg-UlS" secondAttribute="trailing" id="Cub-Ab-CyZ"/>
+                                    <constraint firstItem="pn4-bK-kRS" firstAttribute="height" secondItem="rMn-kc-a4g" secondAttribute="height" id="Eer-yd-6tF"/>
+                                    <constraint firstItem="BSP-bg-UlS" firstAttribute="width" secondItem="rMn-kc-a4g" secondAttribute="width" multiplier="0.01" id="Gqd-lE-iWC"/>
+                                    <constraint firstItem="dea-zj-IjV" firstAttribute="height" secondItem="rMn-kc-a4g" secondAttribute="height" id="MWx-2n-8qi"/>
+                                    <constraint firstItem="dea-zj-IjV" firstAttribute="leading" secondItem="pn4-bK-kRS" secondAttribute="trailing" id="X2T-mu-EZ3"/>
+                                    <constraint firstItem="cEc-It-5sA" firstAttribute="width" secondItem="rMn-kc-a4g" secondAttribute="width" multiplier="0.71" id="ass-Xc-XVP"/>
+                                    <constraint firstItem="dea-zj-IjV" firstAttribute="width" secondItem="rMn-kc-a4g" secondAttribute="width" multiplier="0.2" id="f7W-vX-Wbx"/>
+                                    <constraint firstItem="BSP-bg-UlS" firstAttribute="centerY" secondItem="rMn-kc-a4g" secondAttribute="centerY" id="f91-D2-ezp"/>
+                                    <constraint firstItem="pn4-bK-kRS" firstAttribute="leading" secondItem="rMn-kc-a4g" secondAttribute="leading" id="fEC-iu-Gwv"/>
+                                    <constraint firstItem="BSP-bg-UlS" firstAttribute="height" secondItem="rMn-kc-a4g" secondAttribute="height" id="hui-UF-LUi"/>
+                                    <constraint firstItem="pn4-bK-kRS" firstAttribute="centerY" secondItem="rMn-kc-a4g" secondAttribute="centerY" id="inG-fT-qz1"/>
+                                    <constraint firstItem="pn4-bK-kRS" firstAttribute="width" secondItem="rMn-kc-a4g" secondAttribute="width" multiplier="0.04" id="kIP-w7-SwW"/>
+                                    <constraint firstItem="cEc-It-5sA" firstAttribute="centerY" secondItem="rMn-kc-a4g" secondAttribute="centerY" id="khT-TO-KRK"/>
+                                    <constraint firstItem="dea-zj-IjV" firstAttribute="centerY" secondItem="rMn-kc-a4g" secondAttribute="centerY" id="nfa-mM-KiU"/>
+                                    <constraint firstItem="BSP-bg-UlS" firstAttribute="leading" secondItem="dea-zj-IjV" secondAttribute="trailing" id="oM5-7Q-L7N"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kz8-uw-aSC" userLabel="スペース2">
+                                <rect key="frame" x="0.0" y="157" width="320" height="27.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frR-ui-O3z" userLabel="MajorView群">
+                                <rect key="frame" x="0.0" y="184.5" width="320" height="55"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMt-6J-huR" userLabel="スペース1">
+                                        <rect key="frame" x="0.0" y="-0.5" width="88" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Major :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlY-hP-jwC" customClass="IBDesignableLabel" customModule="RSSIMeasure_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="88" y="0.0" width="77" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5iF-IZ-5z2" userLabel="スペース2">
+                                        <rect key="frame" x="165" y="0.0" width="3" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="不明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NgA-5n-VKt" userLabel="MajorText" customClass="IBDesignableLabel" customModule="RSSIMeasure_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="168" y="0.0" width="64" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="5iF-IZ-5z2" firstAttribute="height" secondItem="frR-ui-O3z" secondAttribute="height" id="5qV-Px-XXg"/>
+                                    <constraint firstItem="kMt-6J-huR" firstAttribute="width" secondItem="frR-ui-O3z" secondAttribute="width" multiplier="0.275" id="7Rx-YQ-FGB"/>
+                                    <constraint firstItem="NgA-5n-VKt" firstAttribute="leading" secondItem="5iF-IZ-5z2" secondAttribute="trailing" id="9gV-gc-3DY"/>
+                                    <constraint firstItem="kMt-6J-huR" firstAttribute="height" secondItem="frR-ui-O3z" secondAttribute="height" id="SBV-gX-7Ha"/>
+                                    <constraint firstItem="5iF-IZ-5z2" firstAttribute="centerY" secondItem="frR-ui-O3z" secondAttribute="centerY" id="Ukn-aS-iw7"/>
+                                    <constraint firstItem="NgA-5n-VKt" firstAttribute="centerY" secondItem="frR-ui-O3z" secondAttribute="centerY" id="YPT-Bv-y8D"/>
+                                    <constraint firstItem="GlY-hP-jwC" firstAttribute="height" secondItem="frR-ui-O3z" secondAttribute="height" id="blt-WH-W2A"/>
+                                    <constraint firstItem="5iF-IZ-5z2" firstAttribute="width" secondItem="frR-ui-O3z" secondAttribute="width" multiplier="0.01" id="iKI-Ch-9NU"/>
+                                    <constraint firstItem="NgA-5n-VKt" firstAttribute="width" secondItem="frR-ui-O3z" secondAttribute="width" multiplier="0.2" id="iog-nq-znb"/>
+                                    <constraint firstItem="GlY-hP-jwC" firstAttribute="width" secondItem="frR-ui-O3z" secondAttribute="width" multiplier="0.24" id="oCk-R4-t0Y"/>
+                                    <constraint firstItem="GlY-hP-jwC" firstAttribute="leading" secondItem="kMt-6J-huR" secondAttribute="trailing" id="qTF-2c-m57"/>
+                                    <constraint firstItem="kMt-6J-huR" firstAttribute="centerY" secondItem="frR-ui-O3z" secondAttribute="centerY" id="s23-bj-dbL"/>
+                                    <constraint firstItem="5iF-IZ-5z2" firstAttribute="leading" secondItem="GlY-hP-jwC" secondAttribute="trailing" id="t4C-UL-KMz"/>
+                                    <constraint firstItem="kMt-6J-huR" firstAttribute="leading" secondItem="frR-ui-O3z" secondAttribute="leading" id="tCN-Tn-d2U"/>
+                                    <constraint firstItem="NgA-5n-VKt" firstAttribute="height" secondItem="frR-ui-O3z" secondAttribute="height" id="xfA-kL-mo9"/>
+                                    <constraint firstItem="GlY-hP-jwC" firstAttribute="centerY" secondItem="frR-ui-O3z" secondAttribute="centerY" id="zRM-No-BVJ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkC-Mh-cyp" userLabel="スペース3">
+                                <rect key="frame" x="0.0" y="239.5" width="320" height="27.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kbl-4M-YTo" userLabel="MinorView群">
+                                <rect key="frame" x="0.0" y="267" width="320" height="55"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqc-QN-a8d" userLabel="スペース1">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minor :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAQ-ME-2r5" customClass="IBDesignableLabel" customModule="RSSIMeasure_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="88" y="-0.5" width="77" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQE-AE-Lon" userLabel="スペース2">
+                                        <rect key="frame" x="165" y="0.0" width="3" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="不明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBT-u8-Vhf" userLabel="MinorText" customClass="IBDesignableLabel" customModule="RSSIMeasure_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="168" y="0.0" width="64" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="oBT-u8-Vhf" firstAttribute="width" secondItem="Kbl-4M-YTo" secondAttribute="width" multiplier="0.2" id="1gt-tO-JhI"/>
+                                    <constraint firstItem="oBT-u8-Vhf" firstAttribute="leading" secondItem="mQE-AE-Lon" secondAttribute="trailing" id="4L2-LH-77b"/>
+                                    <constraint firstItem="oBT-u8-Vhf" firstAttribute="height" secondItem="Kbl-4M-YTo" secondAttribute="height" id="4xx-Sv-L7Q"/>
+                                    <constraint firstItem="iqc-QN-a8d" firstAttribute="centerY" secondItem="Kbl-4M-YTo" secondAttribute="centerY" id="FpM-Yl-FAA"/>
+                                    <constraint firstItem="iqc-QN-a8d" firstAttribute="leading" secondItem="Kbl-4M-YTo" secondAttribute="leading" id="I4r-KK-RqX"/>
+                                    <constraint firstItem="oAQ-ME-2r5" firstAttribute="width" secondItem="Kbl-4M-YTo" secondAttribute="width" multiplier="0.24" id="JHP-MA-v5A"/>
+                                    <constraint firstItem="oAQ-ME-2r5" firstAttribute="leading" secondItem="iqc-QN-a8d" secondAttribute="trailing" id="UnH-9j-yUm"/>
+                                    <constraint firstItem="oBT-u8-Vhf" firstAttribute="centerY" secondItem="Kbl-4M-YTo" secondAttribute="centerY" id="WTR-7v-gHI"/>
+                                    <constraint firstItem="mQE-AE-Lon" firstAttribute="centerY" secondItem="Kbl-4M-YTo" secondAttribute="centerY" id="Xye-vK-gPk"/>
+                                    <constraint firstItem="mQE-AE-Lon" firstAttribute="width" secondItem="Kbl-4M-YTo" secondAttribute="width" multiplier="0.01" id="bi6-1X-3ed"/>
+                                    <constraint firstItem="mQE-AE-Lon" firstAttribute="leading" secondItem="oAQ-ME-2r5" secondAttribute="trailing" id="pEp-6h-mhB"/>
+                                    <constraint firstItem="iqc-QN-a8d" firstAttribute="height" secondItem="Kbl-4M-YTo" secondAttribute="height" id="qhQ-CT-mvz"/>
+                                    <constraint firstItem="iqc-QN-a8d" firstAttribute="width" secondItem="Kbl-4M-YTo" secondAttribute="width" multiplier="0.275" id="sXX-h3-SjA"/>
+                                    <constraint firstItem="oAQ-ME-2r5" firstAttribute="height" secondItem="Kbl-4M-YTo" secondAttribute="height" id="tnY-rF-ulb"/>
+                                    <constraint firstItem="oAQ-ME-2r5" firstAttribute="centerY" secondItem="Kbl-4M-YTo" secondAttribute="centerY" id="yK3-2S-ZaH"/>
+                                    <constraint firstItem="mQE-AE-Lon" firstAttribute="height" secondItem="Kbl-4M-YTo" secondAttribute="height" id="zt0-5M-uzx"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yYS-IP-XkU" userLabel="スペース4">
+                                <rect key="frame" x="0.0" y="322" width="320" height="27.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLq-UO-ZHs" userLabel="RSSIView群">
+                                <rect key="frame" x="0.0" y="349.5" width="320" height="55"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4AM-nd-oFM" userLabel="スペース1">
+                                        <rect key="frame" x="0.0" y="0.0" width="94.5" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSSI :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87f-kx-VSg" customClass="IBDesignableLabel" customModule="RSSIMeasure_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="94.5" y="0.0" width="64" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gka-J0-SYR" userLabel="スペース2">
+                                        <rect key="frame" x="158.5" y="0.0" width="3" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="不明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCH-eS-5UP" userLabel="RSSIText" customClass="IBDesignableLabel" customModule="RSSIMeasure_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="161.5" y="0.0" width="64" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qCH-eS-5UP" firstAttribute="centerY" secondItem="sLq-UO-ZHs" secondAttribute="centerY" id="1AB-WR-jwj"/>
+                                    <constraint firstItem="qCH-eS-5UP" firstAttribute="height" secondItem="sLq-UO-ZHs" secondAttribute="height" id="5RS-ra-QYU"/>
+                                    <constraint firstItem="gka-J0-SYR" firstAttribute="leading" secondItem="87f-kx-VSg" secondAttribute="trailing" id="AB3-87-gDT"/>
+                                    <constraint firstItem="4AM-nd-oFM" firstAttribute="leading" secondItem="sLq-UO-ZHs" secondAttribute="leading" id="Cuq-ea-FkB"/>
+                                    <constraint firstItem="87f-kx-VSg" firstAttribute="width" secondItem="sLq-UO-ZHs" secondAttribute="width" multiplier="0.2" id="O8l-pv-nFI"/>
+                                    <constraint firstItem="qCH-eS-5UP" firstAttribute="leading" secondItem="gka-J0-SYR" secondAttribute="trailing" id="P0m-NU-Cl9"/>
+                                    <constraint firstItem="87f-kx-VSg" firstAttribute="leading" secondItem="4AM-nd-oFM" secondAttribute="trailing" id="QBe-4l-U6k"/>
+                                    <constraint firstItem="87f-kx-VSg" firstAttribute="centerY" secondItem="sLq-UO-ZHs" secondAttribute="centerY" id="T4b-pv-tGG"/>
+                                    <constraint firstItem="gka-J0-SYR" firstAttribute="width" secondItem="sLq-UO-ZHs" secondAttribute="width" multiplier="0.01" id="Wb2-aa-FoA"/>
+                                    <constraint firstItem="87f-kx-VSg" firstAttribute="height" secondItem="sLq-UO-ZHs" secondAttribute="height" id="XED-6F-X0m"/>
+                                    <constraint firstItem="4AM-nd-oFM" firstAttribute="width" secondItem="sLq-UO-ZHs" secondAttribute="width" multiplier="0.295" id="a4n-L9-d6C"/>
+                                    <constraint firstItem="qCH-eS-5UP" firstAttribute="width" secondItem="sLq-UO-ZHs" secondAttribute="width" multiplier="0.2" id="bHp-wS-quB"/>
+                                    <constraint firstItem="gka-J0-SYR" firstAttribute="centerY" secondItem="sLq-UO-ZHs" secondAttribute="centerY" id="dYL-4C-ya5"/>
+                                    <constraint firstItem="4AM-nd-oFM" firstAttribute="height" secondItem="sLq-UO-ZHs" secondAttribute="height" id="gKi-4I-PaX"/>
+                                    <constraint firstItem="4AM-nd-oFM" firstAttribute="centerY" secondItem="sLq-UO-ZHs" secondAttribute="centerY" id="pFF-Pq-MJH"/>
+                                    <constraint firstItem="gka-J0-SYR" firstAttribute="height" secondItem="sLq-UO-ZHs" secondAttribute="height" id="tVT-3H-aFw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="920-Ai-1RK" userLabel="スペース5">
+                                <rect key="frame" x="0.0" y="404.5" width="320" height="27.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOH-qs-SVw" customClass="IBDesignableButton" customModule="RSSIMeasure_iOS" customModuleProvider="target">
+                                <rect key="frame" x="104.5" y="432" width="112" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gOH-qs-SVw" secondAttribute="height" multiplier="107:42" id="g3S-JC-PKU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="計測開始"/>
+                                <connections>
+                                    <action selector="controlButton_Push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jpF-9z-bnB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="920-Ai-1RK" firstAttribute="top" secondItem="sLq-UO-ZHs" secondAttribute="bottom" id="3YW-O5-iiU"/>
+                            <constraint firstItem="sLq-UO-ZHs" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.1" id="4y1-wC-Ym4"/>
+                            <constraint firstItem="frR-ui-O3z" firstAttribute="top" secondItem="Kz8-uw-aSC" secondAttribute="bottom" id="6Vz-ci-Vo0"/>
+                            <constraint firstItem="Kbl-4M-YTo" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="6yG-u6-kEU"/>
+                            <constraint firstItem="jkC-Mh-cyp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9ed-ze-59S"/>
+                            <constraint firstItem="Kbl-4M-YTo" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.1" id="Aa5-a5-FXz"/>
+                            <constraint firstItem="gOH-qs-SVw" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.08" id="Gox-Yj-hUt"/>
+                            <constraint firstItem="920-Ai-1RK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Gqh-hr-PM5"/>
+                            <constraint firstItem="rMn-kc-a4g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HHd-gy-lB9"/>
+                            <constraint firstItem="Kz8-uw-aSC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JhT-Vx-O2x"/>
+                            <constraint firstItem="OxW-ka-INn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Jjg-Ku-OEr"/>
+                            <constraint firstItem="jkC-Mh-cyp" firstAttribute="top" secondItem="frR-ui-O3z" secondAttribute="bottom" id="Jmq-bO-vJN"/>
+                            <constraint firstItem="rMn-kc-a4g" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="Pz9-DZ-heh"/>
+                            <constraint firstItem="yYS-IP-XkU" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="Rt6-JZ-Qmt"/>
+                            <constraint firstItem="jkC-Mh-cyp" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="Sxn-Ww-ynh"/>
+                            <constraint firstItem="920-Ai-1RK" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.05" id="WbJ-6x-p7q"/>
+                            <constraint firstItem="gOH-qs-SVw" firstAttribute="top" secondItem="920-Ai-1RK" secondAttribute="bottom" id="Wfr-vL-C4Z"/>
+                            <constraint firstItem="OxW-ka-INn" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.15" id="aLu-RB-Hn4"/>
+                            <constraint firstItem="yYS-IP-XkU" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.05" id="bEZ-Yy-jQu"/>
+                            <constraint firstItem="sLq-UO-ZHs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bxF-7h-nfJ"/>
+                            <constraint firstItem="yYS-IP-XkU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="c6R-1D-MFL"/>
+                            <constraint firstItem="yYS-IP-XkU" firstAttribute="top" secondItem="Kbl-4M-YTo" secondAttribute="bottom" id="drd-vM-nOv"/>
+                            <constraint firstItem="frR-ui-O3z" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.1" id="f6j-eD-yLh"/>
+                            <constraint firstItem="OxW-ka-INn" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="fUp-7d-XMg"/>
+                            <constraint firstItem="Kz8-uw-aSC" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.05" id="hQz-Wi-XBc"/>
+                            <constraint firstItem="sLq-UO-ZHs" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="iCF-K8-NH6"/>
+                            <constraint firstItem="rMn-kc-a4g" firstAttribute="top" secondItem="OxW-ka-INn" secondAttribute="bottom" id="ihw-CI-RgK"/>
+                            <constraint firstItem="Kbl-4M-YTo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kOq-lo-pHt"/>
+                            <constraint firstItem="gOH-qs-SVw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mCp-V4-B5G"/>
+                            <constraint firstItem="Kz8-uw-aSC" firstAttribute="top" secondItem="rMn-kc-a4g" secondAttribute="bottom" id="oWH-ZO-781"/>
+                            <constraint firstItem="frR-ui-O3z" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="q8m-Bq-ChD"/>
+                            <constraint firstItem="Kz8-uw-aSC" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="r9e-dW-8sC"/>
+                            <constraint firstItem="Kbl-4M-YTo" firstAttribute="top" secondItem="jkC-Mh-cyp" secondAttribute="bottom" id="rFA-43-ZGP"/>
+                            <constraint firstItem="frR-ui-O3z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rse-zo-5Oq"/>
+                            <constraint firstItem="rMn-kc-a4g" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.1" id="uOo-z5-4uw"/>
+                            <constraint firstItem="jkC-Mh-cyp" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.05" id="xBF-4t-ABx"/>
+                            <constraint firstItem="OxW-ka-INn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xKR-uC-UJY"/>
+                            <constraint firstItem="920-Ai-1RK" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="zAG-6q-wrE"/>
+                            <constraint firstItem="sLq-UO-ZHs" firstAttribute="top" secondItem="yYS-IP-XkU" secondAttribute="bottom" id="zmO-WS-5zm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="controlButton" destination="gOH-qs-SVw" id="yct-k1-Glc"/>
+                        <outlet property="majorText" destination="NgA-5n-VKt" id="SpP-gU-4qR"/>
+                        <outlet property="minorText" destination="oBT-u8-Vhf" id="4FM-nP-n6D"/>
+                        <outlet property="rssiText" destination="qCH-eS-5UP" id="Ltq-O7-Y2s"/>
+                        <outlet property="uuidText" destination="cEc-It-5sA" id="5Ke-aM-0bV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="133.09859154929578"/>
+        </scene>
+    </scenes>
+</document>
