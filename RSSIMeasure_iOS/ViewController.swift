@@ -17,11 +17,11 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     @IBOutlet weak var rssiText: UILabel!   //計測しているBLEBeaconのRSSIを表示する
     @IBOutlet weak var controlButton: UIButton! //計測の開始や終了を操作するボタン
     
+    var uuids:[String]!
     var proximityUUID : NSUUID!
     var region : CLBeaconRegion!
     var manager : CLLocationManager!
     var targetBeacon : CLBeacon!
-    
     
     //CSVファイルの名前を格納する
     var textFileName:String!
@@ -29,9 +29,9 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     var documentDirectoryFileURL:URL!
     //CSVファイルのパスを格納する
     var targetFilePath:URL!
-    
     //コントロールボタンの状態把握に利用
     var flag:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,16 +39,15 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         manager = CLLocationManager()
         //デリゲートの設定
         manager.delegate = self
-        //UUIDからNSUUIDを作成
-        proximityUUID = NSUUID(uuidString:"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX")//検知したいBLEBeaconのUUIDに設定
-        region = CLBeaconRegion(proximityUUID:proximityUUID! as UUID,identifier:"BLEBeacon")//リージョンの作成
         
-        //書き込むファイル名
-        textFileName = "rssi.csv"
+        uuids = ["3DBD0100-1DDD-46AC-9E40-6B530FA0DF94","00000000-E30A-1001-B000-001C4D99F26D"]
+        
+//        //ログファイルの名前
+//        textFileName = "rssi.csv"
         //ドキュメントファイルのパスを取得
         documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last
-        //ドキュメントファイルのパスにファイル名を追加
-        targetFilePath = documentDirectoryFileURL.appendingPathComponent(textFileName)
+//        //ドキュメントファイルのパスにファイル名を追加
+//        targetFilePath = documentDirectoryFileURL.appendingPathComponent(textFileName)
         
         checkLocationAuthorization()
         // Do any additional setup after loading the view, typically from a nib.
@@ -56,13 +55,13 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
 
     //CCLocationManagerデリゲートの実装
     func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
-        manager.requestState(for: self.region)
+        manager.requestState(for: region)
         print("didStartMonitoring")
     }
     
     func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for inRegion: CLRegion) {
         print("didDetermineState")
-        manager.startRangingBeacons(in: self.region)
+        manager.startRangingBeacons(in: inRegion as! CLBeaconRegion)
         //        if (state == .inside) {
         //            //領域内にはいったときに距離測定を開始
         //            manager.startRangingBeacons(in: self.region)
@@ -97,18 +96,18 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
             return
         }else{
             targetBeacon = beacons[0]
-            
-            uuidText.text = "\(targetBeacon.proximityUUID)"
+            //uuidText.text = "\(targetBeacon.proximityUUID)"
             majorText.text = "\(targetBeacon.major)"
             minorText.text = "\(targetBeacon.minor)"
             rssiText.text = "\(targetBeacon.rssi)"
-            
+
+            targetFilePath = documentDirectoryFileURL.appendingPathComponent("\(targetBeacon.proximityUUID).csv")
             //ファイルが存在するかの場合わけに利用
             let checkValidation = FileManager.default
-            
+
             //ファイルが存在するかで場合分け
             if (checkValidation.fileExists(atPath: (targetFilePath?.path)!)){//ファイルが存在する場合
-                
+
                 let text = "\(targetBeacon.proximityUUID)"+","+"\(targetBeacon.major)"+","+"\(targetBeacon.minor)"+","+"\(targetBeacon.rssi)"
                 addwriteFile(targetFilePath: targetFilePath!, text: text)
             }else{//ファイルが存在しない場合
@@ -131,11 +130,25 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     
     @IBAction func controlButton_Push(_ sender: Any) {
         if(flag == 0){
-            self.manager.startMonitoring(for:self.region)
+            //self.manager.startMonitoring(for:self.region)
+            
+            for i in 0..<self.uuids.count{
+                //UUIDからNSUUIDを作成
+                proximityUUID = NSUUID(uuidString:uuids[i]);
+                region = CLBeaconRegion(proximityUUID:proximityUUID! as UUID,identifier:"BLEBeacon\(i)")//リージョンの作成
+                self.manager.startMonitoring(for: region)
+            }
+            
             flag = 1
             controlButton.setTitle("計測停止", for: .normal)
         }else if(flag == 1){
-            self.manager.stopRangingBeacons(in:self.region)
+            //self.manager.stopRangingBeacons(in:self.region)
+            for i in 0..<self.uuids.count{
+                //UUIDからNSUUIDを作成
+                proximityUUID = NSUUID(uuidString:uuids[i]);
+                region = CLBeaconRegion(proximityUUID:proximityUUID! as UUID,identifier:"BLEBeacon\(i)")//リージョンの作成
+                self.manager.stopRangingBeacons(in: region)
+            }
             flag = 0
             controlButton.setTitle("計測開始", for: .normal)
         }
