@@ -96,7 +96,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
             return
         }else{
             targetBeacon = beacons[0]
-            //uuidText.text = "\(targetBeacon.proximityUUID)"
+            uuidText.text = "\(targetBeacon.proximityUUID)"
             majorText.text = "\(targetBeacon.major)"
             minorText.text = "\(targetBeacon.minor)"
             rssiText.text = "\(targetBeacon.rssi)"
@@ -111,7 +111,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
                 let text = "\(targetBeacon.proximityUUID)"+","+"\(targetBeacon.major)"+","+"\(targetBeacon.minor)"+","+"\(targetBeacon.rssi)"
                 addwriteFile(targetFilePath: targetFilePath!, text: text)
             }else{//ファイルが存在しない場合
-                let text = "UUID"+","+"Major"+","+"Minor"+","+"RSSI"+"\n"+"\(targetBeacon.proximityUUID)"+","+"\(targetBeacon.major)"+","+"\(targetBeacon.minor)"+","+"\(targetBeacon.rssi)"
+                let text = "Major"+","+"Minor"+","+"RSSI"+"\n"+"\(targetBeacon.major)"+","+"\(targetBeacon.minor)"+","+"\(targetBeacon.rssi)"
                 writeFile(targetFilePath: targetFilePath!, text: text)
             }
         }
@@ -158,7 +158,6 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     func writeFile(targetFilePath:URL,text:String){//ファイルが存在しない場合
         do {
             try text.write(to: targetFilePath, atomically: true, encoding: String.Encoding.shiftJIS)
-            print("新規ファイル作ったよ")
         } catch let error as NSError {
             print("ファイル作成でエラー")
         }
@@ -175,8 +174,6 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
             // ファイルの最後に追記
             fileHandle.seekToEndOfFile()
             fileHandle.write(stringToWrite.data(using: String.Encoding.shiftJIS)!)
-            
-            print("追記したよ！！！！！")
             
         } catch let error as NSError {
             print("failed to append: \(error)")
